@@ -1,0 +1,4 @@
+name: "Module Hero"
+description: "A drupal 9 module"
+type: module
+core_version_requirement: 9.x

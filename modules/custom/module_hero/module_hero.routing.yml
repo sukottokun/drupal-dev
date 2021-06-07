@@ -1,0 +1,7 @@
+module_hero.herolist:
+  path: '/herolist'
+  defaults:
+    _controller: '\Drupal\module_hero\Controller\HeroController::heroList'
+    _title: 'Heraclian dynasty (610–695)'
+  requirements:
+    _permission: 'access content'
