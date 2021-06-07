@@ -67,3 +67,7 @@ sites/simpletest
 /robots.txt
 /update.php
 /web.config
+
+
+# Ignore vscode
+.vscode
