@@ -8,9 +8,11 @@ use Drupal\Core\Controller\ControllerBase;
  * Hero Controller
  * https://www.udemy.com/course/drupal-8-module-development/learn/lecture/10268912#overview
  */
-class HeroController extends ControllerBase {
+class HeroController extends ControllerBase
+{
 
-    public function heroList() {
+    public function heroList()
+    {
 
         $heroes = [
             ['name' => 'Heraclius'],
@@ -21,14 +23,10 @@ class HeroController extends ControllerBase {
             ['name' => 'Justinian II'],
         ];
 
-        $ourHeroes = '';
-        foreach ($heroes as $hero) {
-            $ourHeroes .= '<li>' . $hero['name'] . '</li>';
-        }
-
         return [
-            '#type' => 'markup',
-            '#markup' => '<h3>' . $this->t('The Hericlian Dynasty') . '</h3><ol>' . $ourHeroes . '</ol>',
+            '#theme' => 'hero_list',
+            '#items' => $heroes,
+            '#title' => $this->t('The Greeks Take Back the Empire.')
         ];
     }
 }
